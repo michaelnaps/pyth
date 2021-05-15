@@ -6,15 +6,14 @@
 # intialize the randoom number module
 import random
 
+print("\nProblem 1")
 def prob1():
     # intialize guess counter
     guess_c = 1
     # initialize random number
-    val = 66 # random.randrange(1, 101)
-    
+    val = random.randrange(1, 101)
     # get initial guess from user
     guess = int(input("Enter a guess: "))
-
     # enter loop that iterates until user is correct
     while (guess != val):
         # check if guess is correct
@@ -22,17 +21,15 @@ def prob1():
             print("To high.")
         else:
             print("To low.")
-        
         # get a new guess
         guess = int(input("Enter another guess: "))
-        
         #iterate guess count
         guess_c += 1;  # iterate count variable
-    
     return guess_c  # return number of guesses
     
 print(prob1())
 
+print("\nProblem 2")
 def prob2():
     # guess count (for checking that it is below 7)
     guess_c = 0
@@ -43,15 +40,12 @@ def prob2():
     # range of potential values
     l = 1
     h = 100
-    
     # use bisection method to solve for user's guess
     while (result != "C"):
         # output computer's guess
         print("I am guessing " + str(guess))
-        
         # ask user if current guess is correct
         result = input("Enter L (Low), H (High) or C (Correct): ")
-        
         # adjust range based on user input
         if (result == "L"):
             l = guess
@@ -59,10 +53,8 @@ def prob2():
             h = guess
         elif (result == "C"):
             print("That is correct.")
-            
         guess = int((l + h) / 2)  # divide range by two for next guess
         guess_c += 1  # iterate guess counter
-        
     return guess_c  # return guess counter (for checking)
 
 print(prob2())
