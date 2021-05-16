@@ -26,7 +26,7 @@ def prob1():
         #iterate guess count
         guess_c += 1;  # iterate count variable
     return guess_c  # return number of guesses
-    
+
 print(prob1())
 
 print("\nProblem 2")
