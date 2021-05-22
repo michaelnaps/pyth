@@ -1,8 +1,9 @@
-# File: bored_at_work.py
+# File: prime_calc.py
 # Created by: Michael Napoli
 # Created on: 5/20/2021
 
-# Purpose: Prime number solver I guess
+# Purpose: Program that iterates until stopped, calculating
+#          whether the current number is prime.
 
 def is_prime(n):
     for i in range(2, int(n/2)):
